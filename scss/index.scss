@@ -1,0 +1,15 @@
+@import 'helpers/variables';
+@import 'base/reset';
+
+@import 'helpers/mixin';
+
+@import 'base/customize';
+
+@import 'layout/header';
+@import 'layout/cover';
+@import 'layout/intro';
+@import 'layout/course';
+@import 'layout/student';
+@import 'layout/footer';
+
+@import 'component/button';

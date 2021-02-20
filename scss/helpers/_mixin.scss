@@ -1,0 +1,76 @@
+@mixin text ($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin inputSearch($bg-color,$bg-color-focus,$border-color-focus,$bg-form-color,$pd-top-bottom,$pd-right-left,$fs) {
+    form{
+        background-color: $bg-color;
+        border-radius: $border-radius;
+        .form-control{
+            background-color: $bg-form-color;
+            color: $color-black-0;
+            font-size: $fs;
+            border-color: transparent;
+            transition: none;
+            padding: $pd-top-bottom $pd-right-left;
+            &:focus{
+                background-color: $bg-color-focus;
+                border-color: $border-color-focus;
+                box-shadow: none;
+                border-right: none;
+            }
+            &:focus + .input-group-prepend{
+                .input-group-text{
+                    background-color: $bg-color-focus;
+                    border-color: $border-color-focus; //dedfe0
+                    border-left: none;
+                }
+                &:hover{
+                    .input-group-text{
+                        background-color: $color-red-0;
+                        color: $color-white-0;
+                    }
+                }
+            }
+        }
+        .input-group-prepend{
+            .input-group-text{
+                background-color: $bg-form-color;
+                color: $color-red-0;
+                border-color: transparent;
+                border-left: none;
+                border-radius: $border-radius;
+                cursor: pointer;
+                &:hover{
+                    background-color: $color-red-0;
+                    color: $color-white-0;
+                }
+            }
+        }
+    }
+}
+
+@mixin button($color, $bg-color, $bg-color-hover, $fw, $pd-top-bottom, $pd-right-left){
+    color: $color;
+    background-color: $bg-color;
+    font-weight: $fw;
+    padding: $pd-top-bottom $pd-right-left;
+    &:hover{
+        background-color: $bg-color-hover;
+    }
+}
+
+// Responsive
+@mixin respond-to($screen){ // $screen là đại diện cho các key trong map $breakpoints. VD: 'extra-large' = 1200px
+    @if map-has-key($map: $breakpoints, $key: $screen){ // map $breakpoints sẽ kiểm tra có key $screen hay không
+        $value: map-get($map: $breakpoints, $key: $screen); // dùng map-has-key kiểm tra map của mình, nếu có key tương ứng sẽ lấy được value của nó thông qua hàm map-get
+        @media screen and (max-width: $value) {
+            @content; // Nội dung chỉnh sửa trong max-width
+        }
+    }
+    @else{ // Cảnh báo
+        @warn "`#{$screen}` không tồn tại trong $breakpoints"
+    }
+}

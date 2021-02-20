@@ -1,0 +1,27 @@
+.myCover{
+    background: url(../img/cover.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    .cover__content{
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 30%;
+        h1{
+            @include text ($color-white-0, $fs-4, $fw-bold-0);
+        }
+        p{
+            @include text ($color-white-0, $fs-2 - 2, $fw-normal);
+        }
+        .input{
+            @include inputSearch($color-white-0, $color-white-0, $color-white-0, $color-white-0, $pd-1 + 1, $pd-2 - 3, $fs-2);
+            .form-control{
+                font-weight: 100;
+                // &::placeholder{
+
+                // }
+            }
+        }
+    }
+}

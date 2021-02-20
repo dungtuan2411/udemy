@@ -1,0 +1,21 @@
+.myIntro{
+    background: linear-gradient(to right, $color-purple, $color-red-0);
+    .intro__item{
+        display: flex;
+        align-items: center;
+        .intro__icon{
+            margin-right: $mg-1 + 6;
+            @include text ($color-white-0, $fs-4 + 7, $fw-normal);
+        }
+        .intro__text{
+            p:first-child{
+                @include text ($color-white-0, $fs-0 + 2, $fw-bold-1);
+                margin-bottom: 0;
+            }
+            p:last-child{
+                @include text ($color-white-0, $fs-0, $fw-normal);
+                margin-bottom: 0;
+            }
+        }
+    }
+}

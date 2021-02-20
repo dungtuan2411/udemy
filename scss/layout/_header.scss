@@ -1,0 +1,65 @@
+.myNavbar{
+    .navbar-left{
+        display: flex;
+        align-items: center;
+        .navbar-brand{
+            flex-grow: 1;
+            img{
+                width: 110px;
+            }
+        }
+        .categories{
+            flex-grow: 1;
+            @include text($color-black-light,$fs-1,$fw-normal);
+        }
+        .input__search{
+            flex-grow: 5;
+            @include inputSearch($color-white-cream,$color-white-0,$color-gray-3,$color-white-cream,$pd-1,$pd-2,$fs-1);           
+        }
+    }
+    .navbar-right{
+        .navbar-nav{
+            width: 100%; // Để xét cho item space between
+            justify-content: space-around;
+            .nav-item{
+                .nav-link{
+                    padding: $pd-1 + 2 $pd-2 - 5;
+                    border: 1px solid transparent;
+                    border-radius: $border-radius;
+                    @include text($color-black-light,$fs-1,$fw-normal);
+                    white-space: nowrap;
+                    &:hover{
+                        background-color: $color-gray-1;
+                        border: 1px solid $color-gray-1;
+                    }
+                }
+            }
+            .nav-item:nth-child(3){
+                .nav-link{
+                    border-radius: 50%;
+                }
+            }
+            .nav-item:nth-child(4){
+                .button-group{
+                    display: flex;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    @include respond-to('extra-large'){
+        .navbar-nav{
+            .business , .instructor{
+                display: none;
+            }
+        }
+    }
+    @include respond-to('medium'){
+        .categories , .input__search{
+            display: none;
+        }
+        .button-group{
+            display: none!important;
+        }
+    }
+}

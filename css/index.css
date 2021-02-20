@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.owl-prev, .owl-next {
+  position: absolute;
+  top: 30%;
+  left: -3%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50% !important;
+  background-color: #fff !important;
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1); }
+  .owl-prev:focus, .owl-next:focus {
+    outline: none; }
+  .owl-prev:hover, .owl-next:hover {
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.15); }
+  .owl-prev span, .owl-next span {
+    color: #007791;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 0.8; }
+
+.owl-next {
+  left: unset;
+  right: -3%; }
+
+.owl-theme .owl-nav .disabled {
+  opacity: 0; }
+
+.myNavbar .navbar-left {
+  display: flex;
+  align-items: center; }
+  .myNavbar .navbar-left .navbar-brand {
+    flex-grow: 1; }
+    .myNavbar .navbar-left .navbar-brand img {
+      width: 110px; }
+  .myNavbar .navbar-left .categories {
+    flex-grow: 1;
+    color: #505763;
+    font-size: 13px;
+    font-weight: normal; }
+  .myNavbar .navbar-left .input__search {
+    flex-grow: 5; }
+    .myNavbar .navbar-left .input__search form {
+      background-color: #f2f3f5;
+      border-radius: 2px; }
+      .myNavbar .navbar-left .input__search form .form-control {
+        background-color: #f2f3f5;
+        color: #29303b;
+        font-size: 13px;
+        border-color: transparent;
+        transition: none;
+        padding: 10px 20px; }
+        .myNavbar .navbar-left .input__search form .form-control:focus {
+          background-color: #fff;
+          border-color: #cacbcc;
+          box-shadow: none;
+          border-right: none; }
+        .myNavbar .navbar-left .input__search form .form-control:focus + .input-group-prepend .input-group-text {
+          background-color: #fff;
+          border-color: #cacbcc;
+          border-left: none; }
+        .myNavbar .navbar-left .input__search form .form-control:focus + .input-group-prepend:hover .input-group-text {
+          background-color: #ec5252;
+          color: #fff; }
+      .myNavbar .navbar-left .input__search form .input-group-prepend .input-group-text {
+        background-color: #f2f3f5;
+        color: #ec5252;
+        border-color: transparent;
+        border-left: none;
+        border-radius: 2px;
+        cursor: pointer; }
+        .myNavbar .navbar-left .input__search form .input-group-prepend .input-group-text:hover {
+          background-color: #ec5252;
+          color: #fff; }
+.myNavbar .navbar-right .navbar-nav {
+  width: 100%;
+  justify-content: space-around; }
+  .myNavbar .navbar-right .navbar-nav .nav-item .nav-link {
+    padding: 12px 15px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #505763;
+    font-size: 13px;
+    font-weight: normal;
+    white-space: nowrap; }
+    .myNavbar .navbar-right .navbar-nav .nav-item .nav-link:hover {
+      background-color: rgba(20, 23, 28, 0.05);
+      border: 1px solid rgba(20, 23, 28, 0.05); }
+  .myNavbar .navbar-right .navbar-nav .nav-item:nth-child(3) .nav-link {
+    border-radius: 50%; }
+  .myNavbar .navbar-right .navbar-nav .nav-item:nth-child(4) .button-group {
+    display: flex;
+    white-space: nowrap; }
+@media screen and (max-width: 1200px) {
+  .myNavbar .navbar-nav .business, .myNavbar .navbar-nav .instructor {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  .myNavbar .categories, .myNavbar .input__search {
+    display: none; }
+  .myNavbar .button-group {
+    display: none !important; } }
+
+.myCover {
+  background: url(../img/cover.jpg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  position: relative; }
+  .myCover .cover__content {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 30%; }
+    .myCover .cover__content h1 {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 600; }
+    .myCover .cover__content p {
+      color: #fff;
+      font-size: 18px;
+      font-weight: normal; }
+    .myCover .cover__content .input form {
+      background-color: #fff;
+      border-radius: 2px; }
+      .myCover .cover__content .input form .form-control {
+        background-color: #fff;
+        color: #29303b;
+        font-size: 20px;
+        border-color: transparent;
+        transition: none;
+        padding: 11px 17px; }
+        .myCover .cover__content .input form .form-control:focus {
+          background-color: #fff;
+          border-color: #fff;
+          box-shadow: none;
+          border-right: none; }
+        .myCover .cover__content .input form .form-control:focus + .input-group-prepend .input-group-text {
+          background-color: #fff;
+          border-color: #fff;
+          border-left: none; }
+        .myCover .cover__content .input form .form-control:focus + .input-group-prepend:hover .input-group-text {
+          background-color: #ec5252;
+          color: #fff; }
+      .myCover .cover__content .input form .input-group-prepend .input-group-text {
+        background-color: #fff;
+        color: #ec5252;
+        border-color: transparent;
+        border-left: none;
+        border-radius: 2px;
+        cursor: pointer; }
+        .myCover .cover__content .input form .input-group-prepend .input-group-text:hover {
+          background-color: #ec5252;
+          color: #fff; }
+    .myCover .cover__content .input .form-control {
+      font-weight: 100; }
+
+.myIntro {
+  background: linear-gradient(to right, #6e1a52, #ec5252); }
+  .myIntro .intro__item {
+    display: flex;
+    align-items: center; }
+    .myIntro .intro__item .intro__icon {
+      margin-right: 16px;
+      color: #fff;
+      font-size: 47px;
+      font-weight: normal; }
+    .myIntro .intro__item .intro__text p:first-child {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 0; }
+    .myIntro .intro__item .intro__text p:last-child {
+      color: #fff;
+      font-size: 15px;
+      font-weight: normal;
+      margin-bottom: 0; }
+
+.myCourse {
+  margin-top: 25px; }
+  .myCourse .course__content .course__intro h2 {
+    color: #29303b;
+    font-size: 19px;
+    font-weight: 600; }
+  .myCourse .course__content .course__list .course__item {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 16px; }
+    .myCourse .course__content .course__list .course__item .nav-item:hover .nav-link {
+      border: none; }
+    .myCourse .course__content .course__list .course__item .nav-item .nav-link.active {
+      border: none;
+      border-bottom: 5px solid #007791; }
+    .myCourse .course__content .course__list .course__item .nav-item .nav-link {
+      border: none; }
+  .myCourse .course__content .course__list .tab-content {
+    position: relative; }
+    .myCourse .course__content .course__list .tab-content .course__lesson .card-body .card-title {
+      color: #29303b;
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .myCourse .course__content .course__list .tab-content .course__lesson .card-body .card-text {
+      color: #686f7a;
+      font-size: 12px;
+      font-weight: normal; }
+    .myCourse .course__content .course__list .tab-content .course__lesson .card-body .rating {
+      display: flex;
+      align-items: center; }
+      .myCourse .course__content .course__list .tab-content .course__lesson .card-body .rating .rating__star {
+        color: #F4C150;
+        margin-right: 10px; }
+      .myCourse .course__content .course__list .tab-content .course__lesson .card-body .rating span:nth-child(2) {
+        color: #505763;
+        font-size: 13px;
+        font-weight: normal;
+        margin-right: 2px; }
+      .myCourse .course__content .course__list .tab-content .course__lesson .card-body .rating span:last-child {
+        color: #686f7a;
+        font-size: 12px;
+        font-weight: normal; }
+    .myCourse .course__content .course__list .tab-content .course__lesson .card-body .price {
+      text-align: right; }
+      .myCourse .course__content .course__list .tab-content .course__lesson .card-body .price span:first-child {
+        color: #29303b;
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: line-through; }
+      .myCourse .course__content .course__list .tab-content .course__lesson .card-body .price span:last-child {
+        color: #29303b;
+        font-size: 18px;
+        font-weight: 600; }
+
+.myStudent .student__work {
+  background-color: #f2f3f5;
+  padding: 24px 0; }
+  .myStudent .student__work .student__learn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .myStudent .student__work .student__learn .work__item {
+      display: flex;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid #e8e9eb;
+      border-radius: 2px;
+      margin-right: 16px;
+      padding: 24px; }
+      .myStudent .student__work .student__learn .work__item .work__text {
+        margin-left: 16px; }
+        .myStudent .student__work .student__learn .work__item .work__text h3 {
+          color: #29303b;
+          font-size: 19px;
+          font-weight: 600; }
+        .myStudent .student__work .student__learn .work__item .work__text p {
+          color: #686f7a;
+          font-size: 16px;
+          font-weight: normal; }
+.myStudent .student__content h3 {
+  color: #505763;
+  font-size: 19px;
+  font-weight: normal; }
+.myStudent .student__content .student__course .card-body .card-title {
+  color: #29303b;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.myStudent .student__content .student__course .card-body .card-text {
+  color: #686f7a;
+  font-size: 12px;
+  font-weight: normal; }
+.myStudent .student__content .student__course .card-body .rating {
+  display: flex;
+  align-items: center; }
+  .myStudent .student__content .student__course .card-body .rating .rating__star {
+    color: #F4C150;
+    margin-right: 10px; }
+  .myStudent .student__content .student__course .card-body .rating span:nth-child(2) {
+    color: #505763;
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 2px; }
+  .myStudent .student__content .student__course .card-body .rating span:last-child {
+    color: #686f7a;
+    font-size: 12px;
+    font-weight: normal; }
+.myStudent .student__content .student__course .card-body .price {
+  text-align: right; }
+  .myStudent .student__content .student__course .card-body .price span:first-child {
+    color: #29303b;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: line-through; }
+  .myStudent .student__content .student__course .card-body .price span:last-child {
+    color: #29303b;
+    font-size: 18px;
+    font-weight: 600; }
+
+.btn--white {
+  color: #686f7a;
+  background-color: #fff;
+  font-weight: 600;
+  padding: 12px 15px;
+  border: 1px solid #686f7a; }
+  .btn--white:hover {
+    background-color: #fff; }
+
+.btn--red {
+  color: #fff;
+  background-color: #ec5252;
+  font-weight: 600;
+  padding: 12px 15px;
+  border: 1px solid transparent; }
+  .btn--red:hover {
+    background-color: #992337; }
+  .btn--red:hover {
+    color: #fff; }
+
+/*# sourceMappingURL=index.css.map */
